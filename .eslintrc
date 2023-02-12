@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsdoc/recommended"
+  ],
+  "settings": {
+    "react": {
+             // Tells eslint-plugin-react to automatically detect the version of React to use.
+      "version": "detect"
+    },
+              // Tells eslint how to resolve imports
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/accessible-emoji": "off",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "jsdoc/require-example": [
+      // The Error level should be `error`, `warn`, or `off` (or 2, 1, or 0)
+      "error",
+      // The options vary by rule, but are generally added to an options
+      //  object as follows:
+      {
+        "checkConstructors": true,
+        "exemptedBy": ["type"]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ]
+  },
+  "plugins": ["simple-import-sort", "prettier","jsdoc"]
+}
+

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.prettierrc.json
+.eslintrc
+env.d.ts
+vite.config.ts
+./index.html
+./public
+.gitignore

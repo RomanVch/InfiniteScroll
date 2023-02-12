@@ -1,0 +1,47 @@
+{
+  "name": "infinite-scroll",
+  "private": true,
+  "version": "0.0.1",
+  "homepage": "https://romanvch.github.io/InfiniteScroll",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "docs": "jsdoc -c ./jsdoc.json",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "yarn lint:format && yarn lint:fix ",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.8",
+    "eslint-plugin-jsdoc": "^40.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "taffydb": "^2.7.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "gh-pages": "^4.0.0",
+    "jsdoc": "^4.0.0",
+    "jsdoc-babel": "^0.5.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
